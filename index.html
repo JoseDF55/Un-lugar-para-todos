@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un lugar para todos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #000000, #e658be);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #7f7fd5;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .nav-btn {
+      padding: 0.8rem 1.5rem;
+      background-color: #a18cd1;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #7f7fd5;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 3rem 1rem;
+      background-image: url('https://i.pinimg.com/736x/28/c3/9f/28c39f2f82aaad67644c596adf10f3b3.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #000;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .contenido {
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      display: none;
+    }
+
+    .contenido.visible {
+      display: block;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .qr-box {
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      color: black;
+      max-width: 300px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .qr-box img {
+      width: 60%;
+    }
+
+    .mapa-img-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-width: 90%;
+    }
+
+    .mapa-img-box img {
+      max-width: 1000px;
+      width: 900%;
+      border-radius: 10px;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .caja-imagen {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      max-width: 250px;
+    }
+
+    .caja-imagen img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡Bienvenido a Mi Página Interactiva!</h1>
+    <nav>
+      <button class="nav-btn" onclick="mostrarSeccion('mapa')">Mapa</button>
+      <button class="nav-btn" onclick="mostrarSeccion('personajes')">Propaganda</button>
+      <button class="nav-btn" onclick="mostrarSeccion('explicacion')">Explicación</button>
+      <button class="nav-btn" onclick="mostrarSeccion('qr')">Ver QR</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="Ilustracio╠ün_sin_ti╠ütulo.PNG" alt="Imagen llamativa">
+  </section>
+
+  <section id="mapa" class="contenido">
+    <h2>Mapa del Sitio</h2>
+    <p>Mapa de actividades y talleres que se realizarán.</p>
+    <div class="mapa-img-box">
+      <img src="mapa.PNG" alt="Mapa del sitio">
+    </div>
+  </section>
+
+  <section id="personajes" class="contenido">
+    <h2>Mockups</h2>
+    <p>Estos son los personajes principales que forman parte de esta historia. (Puedes agregar imágenes y descripciones).</p>
+    <div class="galeria">
+      <div class="caja-imagen">
+        <img src="mural.PNG" alt="Imagen mural">
+      </div>
+      <div class="caja-imagen">
+        <img src="mi arepa.jpg" alt="Imagen arepa">
+      </div>
+      <div class="caja-imagen">
+        <img src="poster.PNG" alt="Imagen poster">
+      </div>
+    </div>
+  </section>
+
+  <section id="explicacion" class="contenido">
+    <h2>Explicación</h2>
+    <p>Si eres un artista que aún no se ha dado a conocer, ¡esta es tu oportunidad! Estamos abriendo un espacio especial para quienes quieren compartir su talento, conectar con otros creadores y disfrutar de un rato agradable en un ambiente artístico y relajado.</p>
+
+<p>Habrá ferias de artistas, talleres creativos, y actividades para todos los gustos. Es un encuentro pensado para expresarte, inspirarte y ser parte de una comunidad que valora el arte en todas sus formas.</p>
+
+<p>¡Anímate a participar y a mostrar lo que haces!.</p>
+<p>¡Te esperamos con los brazos abiertos!.</p>
+  </section>
+
+  <section id="qr" class="contenido">
+    <h2>Escanea el código QR</h2>
+    <div class="qr-box">
+      <img src="qrcode_205651394_7a8d1a84338e9461a303d52cc27924ac.png" alt="Código QR">
+      <p>Escanea para más información</p>
+    </div>
+  </section>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('.contenido');
+      secciones.forEach(sec => sec.classList.remove('visible'));
+      document.getElementById(id).classList.add('visible');
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
